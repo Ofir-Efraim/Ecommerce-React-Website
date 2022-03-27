@@ -18,7 +18,7 @@ import ContactForm from "../ContactForm";
 import PaymentForm from "../PaymentForm";
 
 const steps = ["Contact Information", "Confirmation"];
-const Checkout = ({ cart, handleCaptureCheckout, order}) => {
+const Checkout = ({ cart, handleCaptureCheckout, finalPrice }) => {
   const [activeStep, setActiveStep] = useState(0);
   const [userData, setUserData] = useState({});
   const classes = useStyles();
@@ -27,9 +27,9 @@ const Checkout = ({ cart, handleCaptureCheckout, order}) => {
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
   const next = (market) => {
     const data = document.querySelectorAll("Input");
-    let emailAdd = 'testmail@gmail.com'
-    if(data[2].value.includes('@')){
-      emailAdd = data[2].value
+    let emailAdd = "testmail@gmail.com";
+    if (data[2].value.includes("@")) {
+      emailAdd = data[2].value;
     }
     const finalData = {
       lastName: String(market),
@@ -45,8 +45,7 @@ const Checkout = ({ cart, handleCaptureCheckout, order}) => {
       try {
         const token = await commerce.checkout.generateToken(cart.id, {
           type: "cart",
-        }
-        );
+        });
         setCheckoutToken(token);
       } catch (error) {}
     };
@@ -59,9 +58,18 @@ const Checkout = ({ cart, handleCaptureCheckout, order}) => {
           ! {userData.firstName} תודה רבה על ההזמנה
         </Typography>
         <Divider className={classes.divider} />
+        {userData.lastName.includes("עצמי") ? (
+          <Typography variant="h5">
+            ההזמנה תתקבל ב{userData.lastName}
+          </Typography>
+        ) : (
+          <Typography variant="h5">
+            אסוף את ההזמנה בשוק {userData.lastName}
+          </Typography>
+        )}
         <Typography variant="h5">
-          אסוף את ההזמנה בשוק {userData.lastName}
-        </Typography>
+            מחיר סופי: {finalPrice}
+          </Typography>
         <a
           href="https://payboxapp.page.link/BCFJipPAWaTuWBFo7"
           className={classes.link}

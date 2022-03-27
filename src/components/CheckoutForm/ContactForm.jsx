@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const ContactForm = ({ next }) => {
   const methods = useForm();
-  const [market, setMarket] = useState("רכישה ישירה נס ציונה");
+  const [market, setMarket] = useState("");
 
   return (
     <>
@@ -28,7 +28,9 @@ const ContactForm = ({ next }) => {
               onChange={(e) => setMarket(e.target.value)}
               name="market"
               id="nameMarket"
+              required
             >
+              <option value=""></option>
               <option value="רכישה ישירה נס ציונה">רכישה ישירה נס ציונה</option>
               <option value="נס גלים">נס גלים</option>
               <option value="אנג'לה">אנג'לה</option>
@@ -37,6 +39,7 @@ const ContactForm = ({ next }) => {
                 {" "}
                 איסוף אצל תמי- Giliz לחמי בריאות{" "}
               </option>
+              <option value="איסוף עצמי">איסוף עצמי</option>
             </select>
             <FormInput name="firstName" label="שם מלא" />
             <FormInput name="phoneNumber" label="מספר טלפון" />

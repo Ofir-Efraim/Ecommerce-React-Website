@@ -32,7 +32,7 @@ const PaymentForm = ({
         },
       },
     };
-    handleCaptureCheckout(checkoutToken, orderData);
+    handleCaptureCheckout(checkoutToken, orderData, cart.subtotal.raw);
     nextStep();
   };
 

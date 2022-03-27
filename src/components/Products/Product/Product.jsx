@@ -12,7 +12,7 @@ const Product = ({ product, onAddToCart }) => {
                 <CardMedia className={classes.media} image={product.image.url} title={product.name} />
                 <CardContent>
                     <div className={classes.cardContent, classes.text}>
-                        <Typography variant='h6'>
+                        <Typography variant='h5'>
                             {/*This gets rid of all english characters a-z from the title */}
                             {product.name.replace(/[a-z]/g, "")} 
                         </Typography>
@@ -23,9 +23,9 @@ const Product = ({ product, onAddToCart }) => {
                     <IconButton style= {{ position: 'absolute', left:'0', bottom:'0'}} aria-label='Add to Cart' onClick={ () => onAddToCart(product, select)
                      }>
                         <AddShoppingCart />
-                        <Typography variant='subtitle2'>הוסף לעגלה</Typography>
+                        <Typography variant='h5'>הוסף לעגלה</Typography>
                     </IconButton>
-                    <select style= {{ position: 'absolute', right:'0px', bottom:'125px'}} className={classes.menu} value={select} onChange={(e =>setSelect(e.target.value))} name="numOfItems" id="quantity">
+                    <select style= {{ fontSize:'1.1rem',height:'2rem',position: 'absolute', right:'0px', bottom:'105px'}} className={classes.menu} value={select} onChange={(e =>setSelect(e.target.value))} name="numOfItems" id="quantity">
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -33,10 +33,10 @@ const Product = ({ product, onAddToCart }) => {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <Typography style= {{ position: 'absolute', right:'0px', bottom:'155px'}} variant='subtitle1'>
+                    <Typography style= {{ fontSize:'1.6rem', position: 'absolute', right:'0px', bottom:'130px'}} variant='subtitle1'>
                             :בחר כמות 
                         </Typography>
-                    <Typography style= {{ position: 'absolute', right:'0px', bottom:'75px', display: 'inline-block'}} variant='h6' gutterBottom>
+                    <Typography style= {{ position: 'absolute', right:'0px', bottom:'60px', display: 'inline-block'}} variant='h6' gutterBottom>
                             {product.price.formatted_with_symbol}
                     </Typography>
                 </CardActions>

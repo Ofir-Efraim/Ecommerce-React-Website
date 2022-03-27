@@ -8,6 +8,7 @@ const App = () => {
     const [order, setOrder] = useState({});
     const [errorMessage, setErrorMessage] = useState('');
     const [count, setCount] = useState(0);
+    const [finalPrice, setFinalPrice] = useState(0);
 
     const fetchProducts = async () => {
         const { data } = await commerce.products.list({
@@ -30,12 +31,12 @@ const App = () => {
             }
         }
     };
-    const handleCaptureCheckout = async (checkoutToken, newOrder) => {
+    const handleCaptureCheckout = async (checkoutToken, newOrder,price) => {
+        setFinalPrice(price);
         try {
           const incomingOrder = await commerce.checkout.capture(checkoutToken.id, newOrder);
     
           setOrder(incomingOrder);
-    
           refreshCart();
         } catch (error) {
           setErrorMessage(error.data.error.message);
@@ -94,7 +95,7 @@ const App = () => {
                 handleEmptyCart={handleEmptyCart}
                 count = {count}
                 />} />   
-                <Route exact path='/checkout' element={<Checkout cart={cart} order={order} error={errorMessage} handleCaptureCheckout={handleCaptureCheckout}/> } />                
+                <Route exact path='/checkout' element={<Checkout cart={cart} order={order} error={errorMessage} handleCaptureCheckout={handleCaptureCheckout} finalPrice={finalPrice}/> } />                
             </Routes>
         </div>
         </Router>
