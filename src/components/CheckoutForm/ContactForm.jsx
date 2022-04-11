@@ -4,6 +4,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import FormInput from "./FormInput";
 import EmailInput from "./EmailInput";
 import { Link } from "react-router-dom";
+import './ContactStyles.css'
 
 const ContactForm = ({ next }) => {
   const methods = useForm();
@@ -16,14 +17,9 @@ const ContactForm = ({ next }) => {
       </Typography>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(() => next(market))}>
-          <Grid container spacing={3} justifyContent="flex-end" direction="row-reverse" >
+          <Grid wrap="nowrap" container spacing={3} justifyContent='center' alignItems='flex-end' direction="column"  >
             <select
-            style={{padding: '20px 10px 6px 10px',
-            textAlign:'center',
-            fontSize: '17px',
-            color: '#62717a',
-            border:'0',
-            }}
+            className='selectMarket'
              value={market}
               onChange={(e) => setMarket(e.target.value)}
               name="market"
@@ -31,7 +27,7 @@ const ContactForm = ({ next }) => {
               required
             >
               <option value=""></option>
-              <option value="רכישה ישירה נס ציונה">רכישה ישירה נס ציונה</option>
+              <option value="רכישה ישירה ליאת">רכישה ישירה ליאת</option>
               <option value="נס גלים">נס גלים</option>
               <option value="אנג'לה">אנג'לה</option>
               <option value="נווה אביבים - צ'רטוק">נווה אביבים - צ'רטוק</option>
@@ -40,10 +36,15 @@ const ContactForm = ({ next }) => {
                 איסוף אצל תמי- Giliz לחמי בריאות{" "}
               </option>
               <option value="איסוף עצמי">איסוף עצמי</option>
+              <option value="פיינשטיין פינת בן יוסף רמת אביב ג - יום חמישי שעה 19:00">פיינשטיין פינת בן יוסף רמת אביב ג - יום חמישי שעה 19:00</option>
+              <option value="בויאר 6 רמת אביב ג - יום חמישי שעה 18:30">בויאר 6 רמת אביב ג - יום חמישי שעה 18:30</option>
             </select>
-            <FormInput name="firstName" label="שם מלא" />
-            <FormInput name="phoneNumber" label="מספר טלפון" />
-            <EmailInput name="email" label="מייל" />
+            <Typography variant="h6">שם מלא</Typography>
+            <FormInput  label={true} name="firstName"/>
+            <Typography variant="h6">מספר טלפון</Typography>
+            <FormInput label={true} name="phoneNumber" />
+            <Typography variant="h6">מייל</Typography>
+            <EmailInput  name="email"/>
           </Grid>
 
           <br />

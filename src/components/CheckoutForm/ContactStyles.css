@@ -1,0 +1,18 @@
+.selectMarket{
+        margin-bottom:11px;
+        padding: 20px 10px 6px 10px;
+        color: #62717a;
+        border:0px;
+        border-bottom:1px solid black;
+        text-align:right;
+}
+@media only screen and (max-width: 365px) {
+    .selectMarket {
+      max-width: 200px;
+    }
+  }
+  @media only screen and (max-width: 380px) and (min-width:365px) {
+    .selectMarket {
+      max-width: 330px;
+    }
+  }

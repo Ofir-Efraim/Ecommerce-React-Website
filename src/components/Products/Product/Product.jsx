@@ -8,7 +8,7 @@ const Product = ({ product, onAddToCart }) => {
     const [select, setSelect] = useState(0);
     return (
         <div>
-            <Card style={{ height : '550px', position: 'relative'}} className={classes.root}>
+            <Card style={{ height : '800px', position: 'relative'}} className={classes.root}>
                 <CardMedia className={classes.media} image={product.image.url} title={product.name} />
                 <CardContent>
                     <div className={classes.cardContent, classes.text}>
