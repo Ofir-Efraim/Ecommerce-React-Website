@@ -28,7 +28,6 @@ export default makeStyles((theme) => ({
     fontFamily: "Open Sans, sans-serif",
     fontSize: '16px',
     letterSpacing: '2px',
-    textDecoration: 'none',
     textTransform: 'uppercase',
     color: '#000',
     cursor: 'pointer',
