@@ -5,8 +5,7 @@ export default makeStyles(() => ({
     maxWidth: '100%',
   },
   media: {
-    height: '200px',
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '100%', // 1:1
 
     marginLeft:'auto',
     marginRight:'auto',
@@ -27,8 +26,8 @@ export default makeStyles(() => ({
     height: '28px',
     lineHeight: '14px',
     fontSize: '12px',
-    color: '#159A9C',
-    background:'#DEEFE7',
+    color: '#DEEFE7',
+    background:'#002333',
     border: '0',
   },
 }));

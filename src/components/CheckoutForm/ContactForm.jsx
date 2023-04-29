@@ -36,8 +36,12 @@ const ContactForm = ({ next }) => {
                 איסוף אצל תמי- Giliz לחמי בריאות{" "}
               </option>
               <option value="איסוף עצמי">איסוף עצמי</option>
-              <option value="פיינשטיין פינת בן יוסף רמת אביב ג - יום חמישי שעה 19:00">פיינשטיין פינת בן יוסף רמת אביב ג - יום חמישי שעה 19:00</option>
-              <option value="בויאר 6 רמת אביב ג - יום חמישי שעה 18:30">בויאר 6 רמת אביב ג - יום חמישי שעה 18:30</option>
+              <option value="פיינשטיין פינת בן יוסף רמת אביב ג - יום חמישי 19:00">פיינשטיין פינת בן יוסף רמת אביב ג - יום חמישי 19:00</option>
+              <option value="בויאר 6 רמת אביב ג - יום חמישי 18:30">בויאר 6 רמת אביב ג - יום חמישי 18:30</option>
+              {/* <option value="המתנדב 23 אפקה - יום חמישי 19:40">המתנדב 23 אפקה - יום חמישי 19:40</option> */}
+              <option value="הוד השרון">הוד השרון</option>
+              <option value="ברנר">ברנר</option>
+              <option value="משלוח בתיאום מראש">משלוח בתיאום מראש</option>
             </select>
             <Typography variant="h6">שם מלא</Typography>
             <FormInput  label={true} name="firstName"/>

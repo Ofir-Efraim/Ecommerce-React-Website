@@ -70,7 +70,7 @@ const Checkout = ({ cart, handleCaptureCheckout, finalPrice }) => {
             מחיר סופי: {finalPrice}
           </Typography>
         <a
-          href="https://payboxapp.page.link/BCFJipPAWaTuWBFo7"
+          href="https://payboxapp.page.link/sRTLTxrerr2btZjs9"
           className={classes.link}
         >
           מעבר לתשלום בפייבוקס{" "}
