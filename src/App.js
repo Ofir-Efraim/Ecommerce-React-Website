@@ -87,8 +87,8 @@ const App = () => {
         <Router>
         <div>
             <Routes>
-                {/* <Route exact path='/' element={<About/>}/> */}
-                <Route exact path='/' element={<Products cart={cart} products={products} onAddToCart={handleAddToCart} />} />
+                <Route exact path='/' element={<About/>}/>
+                <Route exact path='/Products' element={<Products cart={cart} products={products} onAddToCart={handleAddToCart} />} />
                 <Route exact path='/cart' element={<Cart cart={cart} 
                 handleUpdateCartQty={handleUpdateCartQty} 
                 handleRemoveFromCart={handleRemoveFromCart}

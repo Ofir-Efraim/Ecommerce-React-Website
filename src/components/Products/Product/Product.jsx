@@ -10,9 +10,9 @@ const Product = ({ product, onAddToCart }) => {
         <div>
             <Card style={{ height : '650px', position: 'relative'}} className={classes.root}>
                 <CardMedia className={classes.media} image={product.image.url} title={product.name} />
-                <CardContent>
+                <CardContent style={{padding:"10px"}}>
                     <div className={classes.cardContent, classes.text}>
-                        <Typography variant='h5'>
+                        <Typography variant='h6'>
                             {/*This gets rid of all english characters a-z from the title */}
                             {product.name.replace(/[a-z]/g, "")} 
                         </Typography>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, Badge, Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
-import logo from '../../assets/favicon.ico';
+import logo from '../../assets/logo-tzechem.jpg';
 import useStyles from './styles';
 import { Link, useLocation } from 'react-router-dom'
 

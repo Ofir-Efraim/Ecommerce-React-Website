@@ -1,21 +1,29 @@
-import { makeStyles } from '@material-ui/core/styles';
+import {
+  makeStyles
+} from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
-  title:{
-      textAlign:'center',
-  },  
-  image:{
-    display:'flex',
-    justifyContent:'center',
-    width:'200px',
-    height:'200px',
-    marginRight:'auto',
-    marginLeft:'auto',
+  title: {
+    textAlign: 'center',
+    direction: "rtl",
+    color: "#181818",
+
   },
-  toProducts:{
-    background: 'crimson',
+  image: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    height: "100%",
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    '@media (min-width: 780px)': {
+      width: '500px',
+      height: '500px',
+    },
+  },
+  toProducts: {
+    background: '#5e8749',
     borderRadius: '11px',
-    marginTop:'30px',
     boxSizing: 'border-box',
     color: '#fff',
     cursor: 'pointer',
@@ -24,8 +32,8 @@ export default makeStyles(() => ({
     fontSize: '1.15em',
     fontWeight: '700',
     justifyContent: 'center',
-    marginRight:'auto',
-    marginLeft:'auto',
+    marginRight: 'auto',
+    marginLeft: 'auto',
     lineHeight: '33.4929px',
     padding: '.8em 1em',
     textAlign: 'center',
@@ -34,19 +42,19 @@ export default makeStyles(() => ({
     transition: 'all .2s ease-in-out',
     userSelect: 'none',
     touchAction: 'manipulation',
-    width: '50%',
+    width: '100%',
     wordBreak: 'break-word',
     border: '0',
-    '&:active':{
-    borderBottomStyle: 'none',
-    borderColor: '#dadada',
-    boxShadow: 'rgba(0, 0, 0, .3) 0 3px 3px inset',
-    outline: '0'
+    '&:active': {
+      borderBottomStyle: 'none',
+      borderColor: '#dadada',
+      boxShadow: 'rgba(0, 0, 0, .3) 0 3px 3px inset',
+      outline: '0'
     },
-    '&:hover':{
-    borderBottomStyle: 'none',
-    borderColor: '#e62143',
-    background:'#FF4858'
+    '&:hover': {
+      borderBottomStyle: 'none',
+      borderColor: '#72bf6a',
+      background: '#72bf6a'
     }
   },
 }));

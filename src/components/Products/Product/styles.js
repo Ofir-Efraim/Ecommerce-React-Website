@@ -11,7 +11,7 @@ export default makeStyles(() => ({
     marginRight:'auto',
   },
   text: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   cardActions: {
     display: 'flex',
@@ -20,6 +20,7 @@ export default makeStyles(() => ({
   cardContent: {
     display: 'flex',
     justifyContent: 'space-between',
+    
   },
   menu: {
     padding: '6px 8px 6px 10px',
